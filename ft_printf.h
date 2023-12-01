@@ -6,7 +6,7 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 14:40:40 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/30 15:13:11 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/12/01 13:02:14 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int	ft_putchar_pr(int c, t_print *val);
 int	ft_putstr_pr(char *string, t_print *val);
 int	ft_putint_pr(int n, t_print *val);
 int	ft_putuint_pr(int num, t_print *val);
+int	ft_puthex_pr(unsigned int num, t_print *val, const char flag);
 
 #endif
