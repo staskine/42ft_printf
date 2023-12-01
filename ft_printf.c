@@ -6,7 +6,7 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 14:39:27 by sataskin          #+#    #+#             */
-/*   Updated: 2023/12/01 13:02:30 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/12/01 19:18:04 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	check_conv(va_list ap, const char c, t_print *val)
 	else if (c == 's')
 		ret += ft_putstr_pr(va_arg(ap, char *), val);
 	else if (c == 'p')
-		return (0);
+		ret += ft_putadd_pr(va_arg(ap, unsigned long int), val);
 	else if (c == 'i' || c == 'd')
 		ret += ft_putint_pr(va_arg(ap, int), val);
 	else if (c == 'u')
@@ -31,7 +31,8 @@ static int	check_conv(va_list ap, const char c, t_print *val)
 		ret += ft_puthex_pr(va_arg(ap, unsigned int), val, c);
 	else if (c == '%')
 	{
-		write(1, "%", 1);
+		if (write(1, "%", 1) == -1)
+			val->error = 1;
 		return (1);
 	}
 	return (ret);

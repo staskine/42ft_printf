@@ -2,7 +2,7 @@
 
 int main()
 {
-	//int ret;
+	int ret;
 	//char c = 'a';
 	//char string[] = "BYE";
 	//int ret = ft_printf("HELLO");
@@ -23,9 +23,17 @@ int main()
 	printf(" = %i for intcheck\n", ret);
 	ret = ft_printf("hei%ahei");
 	printf(" = %i for intcheck\n", ret);*/
-	printf("%u, %u, %u,", 1, 2, 3);
+	//printf("%u, %u, %u,", 1, 2, 3);
 	//printf("= %i\n", ret);
 	//ret = ft_printf("%u", -2);
 	//ft_printf("= %i\n", ret);
+	//ret = printf(" NULL %X NULL ", -1);
+	//printf("printf.ret = %i\n", ret);
+	//ret = ft_printf(" NULL %X NULL ", -1);
+	//printf("ft_printf.ret = %i\n", ret);
+	ret = printf("\n|real %p", NULL);
+	printf(" = %i|", ret);
+	ret = ft_printf("\n|mine %p", NULL);
+	ft_printf(" = %i|", ret);
 	return (0);
 }
