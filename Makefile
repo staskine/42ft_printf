@@ -6,13 +6,14 @@
 #    By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/25 13:14:15 by sataskin          #+#    #+#              #
-#    Updated: 2023/12/01 13:01:59 by sataskin         ###   ########.fr        #
+#    Updated: 2023/12/01 19:19:58 by sataskin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SOURCE = ft_printf.c ft_print_char.c ft_print_val.c ft_print_hex.c
+SOURCE = ft_printf.c ft_print_char.c ft_print_val.c  ft_print_hex.c \
+	 ft_print_add.c ft_print_uint.c
 
 OBJECT = $(SOURCE:.c=.o)
 
