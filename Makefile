@@ -6,7 +6,7 @@
 #    By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/25 13:14:15 by sataskin          #+#    #+#              #
-#    Updated: 2023/12/01 19:19:58 by sataskin         ###   ########.fr        #
+#    Updated: 2023/12/01 19:35:24 by sataskin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,5 +35,7 @@ clean:
 fclean: clean
 	make fclean -C ./libft
 	rm -f $(NAME)
+
+re: fclean all
 
 .PHONY: clean fclean all re
