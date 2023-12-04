@@ -6,11 +6,13 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 14:32:09 by sataskin          #+#    #+#             */
-/*   Updated: 2023/12/01 16:59:27 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/12/04 11:57:45 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* This function finds the length of an unsigned integer */
 
 static int	ft_intlen_uint(unsigned int num)
 {
@@ -27,6 +29,8 @@ static int	ft_intlen_uint(unsigned int num)
 	return (len);
 }
 
+/* This function prints out the unsigned integer using recursion */
+
 static void	ft_putunint_pr(unsigned int n, t_print *val)
 {
 	if (n > 9)
@@ -35,6 +39,8 @@ static void	ft_putunint_pr(unsigned int n, t_print *val)
 		return ;
 	ft_putchar_pr((n % 10) + '0', val);
 }
+
+/* This function receives an argument and handles overflow */
 
 int	ft_putuint_pr(int num, t_print *val)
 {

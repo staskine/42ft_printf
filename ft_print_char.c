@@ -6,11 +6,13 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 14:53:24 by sataskin          #+#    #+#             */
-/*   Updated: 2023/11/29 20:12:59 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/12/04 11:59:31 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* This function prints out a single character */
 
 int	ft_putchar_pr(int c, t_print *val)
 {
@@ -18,6 +20,8 @@ int	ft_putchar_pr(int c, t_print *val)
 		val->error = 1;
 	return (1);
 }
+
+/* This function prints out a string using ft_putchar_pr */
 
 int	ft_putstr_pr(char *string, t_print *val)
 {

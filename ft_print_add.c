@@ -6,11 +6,14 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 14:00:31 by sataskin          #+#    #+#             */
-/*   Updated: 2023/12/01 14:43:27 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/12/04 12:01:41 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* This function finds out the length of the hexadecimal and 2 length for the 
+0x is added manually */
 
 static int	ft_addlen(unsigned long num)
 {
@@ -27,6 +30,8 @@ static int	ft_addlen(unsigned long num)
 	return (ret);
 }
 
+/* This function prints out the hexadecimal using recursion */
+
 static void	ft_putadd2_pr(unsigned long int num, t_print *val)
 {
 	if (num >= 16)
@@ -36,6 +41,8 @@ static void	ft_putadd2_pr(unsigned long int num, t_print *val)
 	ft_putchar_pr("0123456789abcdef"[num % 16], val);
 }
 
+/* This function handles null pointers and adds the 0x and then
+hands the rest to the next printer function */
 int	ft_putadd_pr(unsigned long int add, t_print *val)
 {
 	int	ret;

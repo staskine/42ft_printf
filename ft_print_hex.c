@@ -6,11 +6,13 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 12:37:09 by sataskin          #+#    #+#             */
-/*   Updated: 2023/12/01 13:01:29 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/12/04 11:58:45 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* This function finds out the length of the printed out hexadecimal */
 
 static int	ft_hexlen(unsigned int num)
 {
@@ -26,6 +28,8 @@ static int	ft_hexlen(unsigned int num)
 	}
 	return (ret);
 }
+
+/* This function prints out the number in hexadecimal format using recursion */
 
 int	ft_puthex_pr(unsigned int num, t_print *val, const char flag)
 {

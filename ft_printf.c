@@ -6,11 +6,22 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 14:39:27 by sataskin          #+#    #+#             */
-/*   Updated: 2023/12/01 19:18:04 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/12/04 11:55:20 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* This is where the function finds out the conversion it needs to handle
+c = print out a character
+s = print out a string
+p = prints out a void pointer argument in hexadecimal form
+i & d = prints out a base 10 integer
+u = print out an unsigned integer (base 10)
+X = print out a number in hexadecimal (base 16) in uppercase format
+x = print out a number in hexadecimal (base 16) in lowercase format
+% = print out a percent sign 
+*/
 
 static int	check_conv(va_list ap, const char c, t_print *val)
 {
@@ -38,6 +49,11 @@ static int	check_conv(va_list ap, const char c, t_print *val)
 	return (ret);
 }
 
+/* The main function for my ft_printf. It takes the argument from 
+the input and goes through the string till it finds a conversion. Then
+it acts the same way as the original printf. This function returns the 
+value of characters it has printed out. */
+ 
 int	ft_printf(const char *str, ...)
 {
 	t_print	val;

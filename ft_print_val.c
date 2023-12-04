@@ -6,11 +6,13 @@
 /*   By: sataskin <sataskin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 16:29:55 by sataskin          #+#    #+#             */
-/*   Updated: 2023/12/01 19:17:35 by sataskin         ###   ########.fr       */
+/*   Updated: 2023/12/04 11:56:28 by sataskin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* This function finds out the length of the number */
 
 static int	ft_intlen(int n)
 {
@@ -37,6 +39,8 @@ static int	ft_intlen(int n)
 	}
 	return (len);
 }
+
+/* This function prints out a number using recursion */
 
 int	ft_putint_pr(int n, t_print *val)
 {
