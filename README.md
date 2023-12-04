@@ -12,7 +12,11 @@ Everything needed is found from this repository.
 - Just compile my ft_printf using the Makefile using the command 'make'
 - Use the header #include "ft_printf.h"
 - Use ft_printf the same as a normal printf
+
 ft_printf("This is an example");
+
 char string [] = "Another example";
+
 ft_printf("%s", string);
+
 etc.
